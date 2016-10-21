@@ -1,7 +1,7 @@
 {
   "name": "preact-redux-autocomplete",
   "version": "1.0.0",
-  "description": "Animated autocomplete using preact + preact redux + animate.css",
+  "description": "Fancy autocomplete using preact + preact redux + animate.css",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
     "start": "superstatic build -p 8080 --host 0.0.0.0 --gzip -c '{\"rewrites\": [{\"source\":\"**\",\"destination\":\"index.html\"}],\"headers\":[{\"source\":\"**\",\"headers\":[{\"key\":\"Cache-Control\",\"value\":\"max-age=86400\"}]}]}'",
