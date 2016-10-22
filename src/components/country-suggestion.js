@@ -15,7 +15,12 @@ export default class TodoItem extends Component {
 				<div class="left animated zoomIn">
                     <img src={"../assets/countries/" + key.toLowerCase() + ".png" } />
                 </div>
-                <div class="right">{country[key]}</div>
+                <div class="right">
+                    {country[key]} 
+                    <small>
+                        <strong> ({key.toUpperCase()}) </strong>
+                    </small>
+                </div>
 			</div>
 		);
 	}

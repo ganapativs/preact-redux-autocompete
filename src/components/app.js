@@ -100,7 +100,7 @@ export default class App extends Component {
                         selectedCountry
                         ?
                             <div class="selected">
-                                You have selected: <strong>{selectedCountry[Object.keys(selectedCountry)[0]]}</strong>
+                                You have selected: <strong>{selectedCountry[Object.keys(selectedCountry)[0]]} ({Object.keys(selectedCountry)[0].toUpperCase()})</strong>
                             </div>
                         :
                             null
