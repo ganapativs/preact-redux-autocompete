@@ -4,9 +4,7 @@ Fancy autocomplete using Preact, Redux and Animate.css
 
 
 ##Demo - [fancy.surge.sh](https://fancy.surge.sh)
-
 ---
-
 
 # Quick-Start Guide
 
@@ -31,7 +29,7 @@ cd autocomplete
 rm -rf .git && git init && yarn init && yarn
 ```
 
-> :information_source: This re-initializes the repo and sets up your NPM project.
+> :information_source: This re-initializes the repo and sets up your Yarn project.
 
 
 **3. Install the dependencies:**
