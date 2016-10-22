@@ -3,17 +3,12 @@
 Fancy autocomplete using Preact, Redux and Animate.css
 
 
-** Demo - [fancy.surge.sh](https://fancy.surge.sh)
-
-
----
-
+##Demo - [fancy.surge.sh](https://fancy.surge.sh)
 
 # Quick-Start Guide
 
 - [Installation](#installation)
 - [Development Workflow](#development-workflow)
-- [Structure](#structure)
 
 
 ## Installation
@@ -32,7 +27,7 @@ cd autocomplete
 rm -rf .git && git init && yarn init && yarn
 ```
 
-> :information_source: This re-initializes the repo and sets up your NPM project.
+> :information_source: This re-initializes the repo and sets up your Yarn project.
 
 
 **3. Install the dependencies:**
@@ -69,13 +64,11 @@ You can now deploy the contents of the `build` directory to production!
 >
 > `yarn run surge`
 
+> :information_source: Change your surge domain name in package.json scripts.
+
 ---
 
 
 ## License
 
 MIT
-
-
-[Preact]: https://github.com/developit/preact
-[webpack]: https://webpack.github.io
