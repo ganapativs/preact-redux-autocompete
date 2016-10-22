@@ -1,9 +1,14 @@
 import { createStore } from 'redux';
 
-let ACTIONS = {};
+let ACTIONS = {
+	SEARCH_COUNTRIES: ({ countries, ...state }, { filteredCountries }) => ({
+		countries: filteredCountries,
+		...state
+	})
+}
 
 const INITIAL = {
-	todos: []
+	countries: []
 };
 
 export default createStore( (state, action) => (

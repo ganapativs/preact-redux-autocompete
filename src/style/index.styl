@@ -1,3 +1,11 @@
+$darkGrey = #8f8e92
+$white = #ffffff
+$grey = #dddddd
+$fontColor = #777777
+$lightGrey = #f5f5f5
+
+$anim_func = cubic-bezier(.02, .01, .47, 1)
+
 html, body
     height: 100%;
     width: 100%;
@@ -12,4 +20,141 @@ html, body
     *
         box-sizing border-box
         font-family: 'Titillium Web', sans-serif;
+        
+body
+    transition opacity 0.15s $anim_func
+    opacity 0
+    overflow hidden
 
+.autocomplete-wrapper
+    .title
+        text-align: center;
+        font-size: 30px;
+        text-shadow: 1px 1px $white, 1px 2px $grey;
+        color: $darkGrey;
+        margin: 50px auto 20px auto;
+        width: 400px;
+        .blink
+            animation blink 0.8s 0.4s infinite forwards    
+            display: inline-block;
+            transform translateY(-4px)
+    .footer
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        box-shadow: 0 -1px 200px rgba(0,0,0,0.08)
+        a
+            padding 0 10px
+            color: $darkGrey;
+            text-decoration: none;
+            opacity 0.7
+            transition opacity 0.2s ease-in
+            &:hover
+                opacity 1
+    .autocomplete-box
+        border-radius: 4px;
+        width: 400px;
+        margin: 50px auto;
+        max-height 400px
+        transition transform 0.2s $anim_func, height 0.2s $anim_func
+        position relative
+        .autocomplete-input
+            width: 100%;
+            height: 50px;
+            border: 0;
+            border-radius: 50px;
+            padding: 5px 65px 5px 20px;
+            font-size: 18px;
+            transition transform 0.2s $anim_func, box-shadow 0.2s $anim_func
+            box-shadow: 0 20px 20px rgba(0,0,0,.08);
+            text-transform capitalize
+            animation-duration 0.7s
+            &.not-empty
+                box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            &:hover, &:focus, &:active
+                outline none
+        .clear
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 40px;
+            color $darkGrey
+            transition background 0.2s $anim_func
+            &:hover
+                background $lightGrey
+        .selected
+            text-align: center;
+            margin: 25px;
+            color: $fontColor;
+            z-index -1
+            position relative
+        .autocomplete-suggestions
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            padding-top: 60px;
+            background: $white;
+            z-index: -1;
+            border-radius: 40px 40px 4px 4px;
+            box-shadow: 0 20px 20px rgba(0,0,0,0.08);
+            transition height 0.3s $anim_func, padding-top 0.2s $anim_func, opacity 0.15s $anim_func
+            backface-visibility hidden
+            transform translate3d(0, 0, 0) rotate(0.00001deg)
+            overflow hidden
+            .autocomplete-suggestion
+                background: #fff;
+                height: 50px;
+                overflow: hidden;
+                display: flex;
+                align-items: center
+                box-shadow: inset 0 1px $lightGrey;
+                animation-duration 0.8s
+                transition background 0.2s $anim_func
+                &:first-child
+                    box-shadow none
+                &:hover, &.focused
+                    background $lightGrey
+                    cursor pointer
+                &.empty
+                    background: $white !important;
+                    justify-content: center;
+                    color: $fontColor;
+                .left
+                    width: 70px;
+                    padding: 10px;
+                    position: relative;
+                    height: 50px;
+                    animation-duration 0.4s
+                    img
+                        max-width: 50px;
+                        max-height: 40px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        box-shadow: 0 1px 1px $grey;
+                .right
+                    color $fontColor
+                
+                
+@keyframes blink {
+    0% {
+        opacity 1
+    }
+    50% {
+        opacity 0
+    }
+    100% {
+        opacity 1
+    }
+}
