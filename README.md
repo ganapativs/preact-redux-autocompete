@@ -4,13 +4,11 @@ Fancy autocomplete using Preact, Redux and Animate.css
 
 
 ##Demo - [fancy.surge.sh](https://fancy.surge.sh)
----
 
 # Quick-Start Guide
 
 - [Installation](#installation)
 - [Development Workflow](#development-workflow)
-- [Structure](#structure)
 
 
 ## Installation
