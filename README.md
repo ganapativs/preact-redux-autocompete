@@ -5,7 +5,6 @@ Fancy autocomplete using Preact, Redux and Animate.css
 
 ##Demo - [fancy.surge.sh](https://fancy.surge.sh)
 
-
 ---
 
 
@@ -75,7 +74,3 @@ You can now deploy the contents of the `build` directory to production!
 ## License
 
 MIT
-
-
-[Preact]: https://github.com/developit/preact
-[webpack]: https://webpack.github.io
