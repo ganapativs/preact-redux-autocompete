@@ -64,6 +64,8 @@ You can now deploy the contents of the `build` directory to production!
 >
 > `yarn run surge`
 
+> :information_source: Change your surge domain name in package.json scripts.
+
 ---
 
 
