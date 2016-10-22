@@ -44,12 +44,16 @@
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
     "source-map-loader": "^0.1.5",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.3.1",
     "superstatic": "^4.0.2",
     "url-loader": "^0.5.7",
+    "webfontloader": "^1.6.26",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "preact": "^4.8.0",
     "preact-redux": "^1.0.1",
     "redux": "^3.5.2"

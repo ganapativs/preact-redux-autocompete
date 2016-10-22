@@ -1,19 +1,6 @@
 import { createStore } from 'redux';
 
-let ACTIONS = {
-	ADD_TODO: ({ todos, ...state }, { text }) => ({
-		todos: [...todos, {
-			id: Math.random().toString(36).substring(2),
-			text
-		}],
-		...state
-	}),
-
-	REMOVE_TODO: ({ todos, ...state }, { todo }) => ({
-		todos: todos.filter( i => i!==todo ),
-		...state
-	})
-};
+let ACTIONS = {};
 
 const INITIAL = {
 	todos: []
