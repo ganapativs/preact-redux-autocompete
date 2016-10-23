@@ -5,6 +5,8 @@ Fancy autocomplete using Preact, Redux and Animate.css
 
 ##Demo - [fancy.surge.sh](https://fancy.surge.sh)
 
+###Medium Article - [https://medium.com/@ganapativs/fancy-autocomplete-using-preact-and-animate-css-4b17de9036a3](https://medium.com/@ganapativs/fancy-autocomplete-using-preact-and-animate-css-4b17de9036a3)
+
 # Quick-Start Guide
 
 - [Installation](#installation)
