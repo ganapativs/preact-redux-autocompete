@@ -62,6 +62,20 @@ export default class App extends Component {
         this.props.searchCountry('');
     }
     
+    onFocus = () => {
+        if(this.blurTimeout)
+            clearTimeout(this.blurTimeout);
+        this.blurTimeout = null;
+        this.setState({inputFocused: true});
+    }
+    
+    onBlur = () => {
+        this.blurTimeout = setTimeout(() => {
+            this.setState({inputFocused: false});
+            this.blurTimeout = null;
+        }, 100);
+    }
+    
 	render({ countries }, { searchQuery, selectedCountry, focusedItem, inputFocused }) {
         let suggestionStyles = {
             height: searchQuery && searchQuery.length && countries.length && inputFocused ? 
@@ -82,8 +96,8 @@ export default class App extends Component {
                         <input class={{"autocomplete-input animated fadeInUp": true, 
                                         "not-empty": searchQuery && searchQuery.length}}
                                 value={searchQuery} 
-                                onFocus={() => this.setState({inputFocused: true})}
-                                onBlur={() => this.setState({inputFocused: false})}
+                                onFocus={this.onFocus}
+                                onBlur={this.onBlur}
                                 onInput={this.searchCountries} 
                                 placeholder="Search for countries" autoFocus />
                         {
