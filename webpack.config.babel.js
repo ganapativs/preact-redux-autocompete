@@ -62,7 +62,8 @@ module.exports = {
 			'process.env.NODE_ENV': JSON.stringify(ENV)
 		}),
 		new HtmlWebpackPlugin({
-            title: 'Fancy Autocomplete - Preact + Redux + Animate.css'
+            title: 'Fancy Autocomplete - Preact + Redux + Animate.css',
+            template: 'src/index.ejs',
         })
 	]).concat(ENV==='production' ? [
 		new webpack.optimize.DedupePlugin(),

@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 
-export default class TodoItem extends Component {
+export default class CountrySuggestions extends Component {
 	shouldComponentUpdate({ country, onSelect, focused }) {
 		return country !== this.props.country || 
                 focused !== this.props.focused || 
