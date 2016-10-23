@@ -3,7 +3,8 @@ import { connect } from 'preact-redux';
 import { bindActions } from '../util';
 import reduce from '../reducers';
 import * as actions from '../actions';
-import CountrySuggestion from './country-suggestion';
+import Suggestions from './suggestions';
+import Footer from './footer';
 
 @connect(reduce, bindActions(actions))
 export default class App extends Component {
@@ -77,14 +78,6 @@ export default class App extends Component {
     }
     
 	render({ countries }, { searchQuery, selectedCountry, focusedItem, inputFocused }) {
-        let suggestionStyles = {
-            height: searchQuery && searchQuery.length && countries.length && inputFocused ? 
-                        countries.length * 50 + 60 : 
-                            searchQuery && searchQuery.length && inputFocused ? 
-                                110 : 0, 
-            paddingTop: searchQuery && inputFocused ? 60 : 0,
-            opacity: searchQuery && inputFocused ? 1 : 0
-        };
 		return (
 			<div id="app" class="autocomplete-wrapper">
                 <h2 class="title animated fadeInUp">
@@ -119,57 +112,13 @@ export default class App extends Component {
                         :
                             null
                     }
-                    {/* We can move suggestions to separate component to make it more modular */}
-                    <div class="autocomplete-suggestions" 
-                         style={suggestionStyles}>
-                        {
-                            searchQuery && searchQuery.length && countries.length
-                            ?
-                                countries.map((country, i) => (
-                                    <CountrySuggestion key={Object.keys(country)[0]} 
-                                        onSelect={this.onSelect} 
-                                        focused={focusedItem === i}
-                                        country={country} />
-                                )) 
-                            :
-                                searchQuery && searchQuery.length
-                                ?
-                                    <div class="autocomplete-suggestion animated fadeInUp empty">
-                                        No country found with that name.
-                                    </div>
-                                :
-                                    null
-                        }
-                    </div>
+                    <Suggestions searchQuery={searchQuery} 
+                                 focusedItem={focusedItem} 
+                                 inputFocused={inputFocused} 
+                                 countries={countries} 
+                                 onSelect={this.onSelect} />
                 </div>
-                {
-                    !searchQuery
-                    ?
-                        <div class="footer animated fadeInUp">
-                            <a href="http://meetguns.com" class="hidden-xs" target="_blank">
-                                <button class="bttn-stretch bttn-sm">
-                                    meetguns.com
-                                </button>
-                            </a>
-                            <a href="https://twitter.com/ganapativs" target="_blank">
-                                <button class="bttn-stretch bttn-sm">
-                                    @ganapativs
-                                </button>
-                            </a>
-                            <a href="https://github.com/ganapativs/preact-redux-autocompete" target="_blank">
-                                <button class="bttn-stretch bttn-sm">
-                                    Github Repo
-                                </button>
-                            </a>
-                            <a href="https://ganapativs.github.io/bttn.css/" class="hidden-xs" target="_blank">
-                                <button class="bttn-stretch bttn-sm">
-                                    bttn.css
-                                </button>
-                            </a>
-                        </div>
-                    :
-                        null
-                }
+                <Footer searchQuery={searchQuery} />
 			</div>
 		);
 	}
