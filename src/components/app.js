@@ -128,11 +128,17 @@ export default class App extends Component {
                         }
                     </div>
                 </div>
-                <div class="footer animated fadeInUp">
-                    <a href="http://meetguns.com" target="_blank">meetguns.com</a>
-                    <a href="https://twitter.com/ganapativs" target="_blank">@ganapativs</a>
-                    <a href="https://github.com/ganapativs/preact-redux-autocompete" target="_blank">Github Repo</a>
-                </div>
+                {
+                    !searchQuery
+                    ?
+                        <div class="footer animated fadeInUp">
+                            <a href="http://meetguns.com" target="_blank">meetguns.com</a>
+                            <a href="https://twitter.com/ganapativs" target="_blank">@ganapativs</a>
+                            <a href="https://github.com/ganapativs/preact-redux-autocompete" target="_blank">Github Repo</a>
+                        </div>
+                    :
+                        null
+                }
 			</div>
 		);
 	}
