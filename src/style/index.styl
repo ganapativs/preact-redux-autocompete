@@ -56,6 +56,8 @@ body
             transition opacity 0.2s ease-in
             &:hover
                 opacity 1
+            button
+                color: $darkGrey;
     .autocomplete-box
         border-radius: 4px;
         width: 400px;
@@ -171,3 +173,7 @@ body
         .title
             margin: 10px auto -35px auto;
             font-size: 20px;
+            
+@media screen and (max-width: 767px)
+    .hidden-xs
+        display none !important

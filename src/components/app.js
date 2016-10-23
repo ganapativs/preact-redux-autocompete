@@ -146,9 +146,26 @@ export default class App extends Component {
                     !searchQuery
                     ?
                         <div class="footer animated fadeInUp">
-                            <a href="http://meetguns.com" target="_blank">meetguns.com</a>
-                            <a href="https://twitter.com/ganapativs" target="_blank">@ganapativs</a>
-                            <a href="https://github.com/ganapativs/preact-redux-autocompete" target="_blank">Github Repo</a>
+                            <a href="http://meetguns.com" class="hidden-xs" target="_blank">
+                                <button class="bttn-stretch bttn-sm">
+                                    meetguns.com
+                                </button>
+                            </a>
+                            <a href="https://twitter.com/ganapativs" target="_blank">
+                                <button class="bttn-stretch bttn-sm">
+                                    @ganapativs
+                                </button>
+                            </a>
+                            <a href="https://github.com/ganapativs/preact-redux-autocompete" target="_blank">
+                                <button class="bttn-stretch bttn-sm">
+                                    Github Repo
+                                </button>
+                            </a>
+                            <a href="https://ganapativs.github.io/bttn.css/" class="hidden-xs" target="_blank">
+                                <button class="bttn-stretch bttn-sm">
+                                    bttn.css
+                                </button>
+                            </a>
                         </div>
                     :
                         null
