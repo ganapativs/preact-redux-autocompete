@@ -7,6 +7,8 @@ Fancy autocomplete using Preact, Redux and Animate.css
 
 ###Medium Article - [https://medium.com/@ganapativs/fancy-autocomplete-using-preact-and-animate-css-4b17de9036a3](https://medium.com/@ganapativs/fancy-autocomplete-using-preact-and-animate-css-4b17de9036a3)
 
+<img src="https://cdn-images-1.medium.com/max/1600/1*KLOszGGY4kl3CL4HMiyFaA.gif" width="300" />
+
 # Quick-Start Guide
 
 - [Installation](#installation)
