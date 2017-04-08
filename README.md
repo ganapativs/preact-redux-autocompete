@@ -40,7 +40,7 @@ rm -rf .git && git init && yarn init && yarn
 yarn
 ```
 
-> You're done installing! Now let's get started developing.
+> You're done installing! Now let's get started.
 
 
 
